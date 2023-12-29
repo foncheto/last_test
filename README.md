@@ -7,7 +7,7 @@ CODER_REDSHIFT_DB = ""
 ALPHAVANTAGE_API_KEY = ""
 
 Luego se debe ejecutar "docker-compose up" desde la carpeta donde se clono el repo
-y luego desde Airflow activar el DAG monthly. Se adjunta un log y screenshots del ejemplo exitoso.
+y luego desde Airflow activar el DAG monthly. Se adjunta un log y screenshots del ejemplo exitoso tanto de correo como logs.
 
 El correo de alerta enviado se realiza cuando se encuentran valores de volumenes mas altos de lo normal (>2500) dentro de las acciones obtenidas.
 
