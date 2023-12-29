@@ -64,6 +64,7 @@ x-airflow-common: &airflow-common
     - ./processed_data:/opt/airflow/processed_data
     - ./keys:/opt/airflow/keys
     - ./requirements.txt:/opt/airflow/requirements.txt
+    - ./config:/opt/airflow
   env_file: .env
   user: "${AIRFLOW_UID:-50000}:${AIRFLOW_GID:-50000}"
   depends_on:

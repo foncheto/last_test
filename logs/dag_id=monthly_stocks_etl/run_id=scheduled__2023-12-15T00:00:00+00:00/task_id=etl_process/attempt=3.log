@@ -1,0 +1,36 @@
+[2023-12-29 02:03:48,545] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: monthly_stocks_etl.etl_process scheduled__2023-12-15T00:00:00+00:00 [queued]>
+[2023-12-29 02:03:48,565] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: monthly_stocks_etl.etl_process scheduled__2023-12-15T00:00:00+00:00 [queued]>
+[2023-12-29 02:03:48,567] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-29 02:03:48,569] {taskinstance.py:1377} INFO - Starting attempt 3 of 4
+[2023-12-29 02:03:48,570] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-29 02:03:48,582] {taskinstance.py:1397} INFO - Executing <Task(PythonOperator): etl_process> on 2023-12-15 00:00:00+00:00
+[2023-12-29 02:03:48,590] {standard_task_runner.py:52} INFO - Started process 245 to run task
+[2023-12-29 02:03:48,597] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'monthly_stocks_etl', 'etl_process', 'scheduled__2023-12-15T00:00:00+00:00', '--job-id', '80', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmplesi5sas', '--error-file', '/tmp/tmpludqsu5e']
+[2023-12-29 02:03:48,601] {standard_task_runner.py:80} INFO - Job 80: Subtask etl_process
+[2023-12-29 02:03:48,703] {task_command.py:371} INFO - Running <TaskInstance: monthly_stocks_etl.etl_process scheduled__2023-12-15T00:00:00+00:00 [running]> on host 476b9ce47c04
+[2023-12-29 02:03:48,811] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=monthly_stocks_etl
+AIRFLOW_CTX_TASK_ID=etl_process
+AIRFLOW_CTX_EXECUTION_DATE=2023-12-15T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=3
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-12-15T00:00:00+00:00
+[2023-12-29 02:03:49,847] {logging_mixin.py:115} INFO - Connected to Redshift successfully!
+[2023-12-29 02:03:50,455] {logging_mixin.py:115} INFO - <Response [200]>
+[2023-12-29 02:03:50,456] {taskinstance.py:1909} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/etl_dag.py", line 121, in run_etl_process
+    df = format_json(data, symbol)
+  File "/opt/airflow/dags/etl_dag.py", line 91, in format_json
+    df = pd.DataFrame(json['Monthly Adjusted Time Series']).T
+KeyError: 'Monthly Adjusted Time Series'
+[2023-12-29 02:03:50,462] {taskinstance.py:1420} INFO - Marking task as UP_FOR_RETRY. dag_id=monthly_stocks_etl, task_id=etl_process, execution_date=20231215T000000, start_date=20231229T020348, end_date=20231229T020350
+[2023-12-29 02:03:50,471] {standard_task_runner.py:97} ERROR - Failed to execute job 80 for task etl_process ('Monthly Adjusted Time Series'; 245)
+[2023-12-29 02:03:50,487] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-12-29 02:03:50,512] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

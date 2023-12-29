@@ -1,0 +1,43 @@
+[2023-12-29 01:27:08,797] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: monthly_stocks_etl.etl_process manual__2023-12-29T01:27:07.314833+00:00 [queued]>
+[2023-12-29 01:27:08,802] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: monthly_stocks_etl.etl_process manual__2023-12-29T01:27:07.314833+00:00 [queued]>
+[2023-12-29 01:27:08,802] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-29 01:27:08,802] {taskinstance.py:1377} INFO - Starting attempt 1 of 2
+[2023-12-29 01:27:08,803] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-29 01:27:08,809] {taskinstance.py:1397} INFO - Executing <Task(PythonOperator): etl_process> on 2023-12-29 01:27:07.314833+00:00
+[2023-12-29 01:27:08,813] {standard_task_runner.py:52} INFO - Started process 1061 to run task
+[2023-12-29 01:27:08,815] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'monthly_stocks_etl', 'etl_process', 'manual__2023-12-29T01:27:07.314833+00:00', '--job-id', '51', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmp1t7x8lkc', '--error-file', '/tmp/tmptvrwavj2']
+[2023-12-29 01:27:08,816] {standard_task_runner.py:80} INFO - Job 51: Subtask etl_process
+[2023-12-29 01:27:08,861] {task_command.py:371} INFO - Running <TaskInstance: monthly_stocks_etl.etl_process manual__2023-12-29T01:27:07.314833+00:00 [running]> on host 476b9ce47c04
+[2023-12-29 01:27:08,903] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=monthly_stocks_etl
+AIRFLOW_CTX_TASK_ID=etl_process
+AIRFLOW_CTX_EXECUTION_DATE=2023-12-29T01:27:07.314833+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-12-29T01:27:07.314833+00:00
+[2023-12-29 01:27:10,104] {logging_mixin.py:115} INFO - Connected to Redshift successfully!
+[2023-12-29 01:27:10,988] {logging_mixin.py:115} INFO - <Response [200]>
+[2023-12-29 01:27:11,910] {logging_mixin.py:115} INFO - <Response [200]>
+[2023-12-29 01:27:11,959] {logging_mixin.py:115} INFO - <class 'pandas.core.frame.DataFrame'>
+RangeIndex: 578 entries, 0 to 577
+Data columns (total 9 columns):
+ #   Column           Non-Null Count  Dtype         
+---  ------           --------------  -----         
+ 0   open             578 non-null    float64       
+ 1   high             578 non-null    float64       
+ 2   low              578 non-null    float64       
+ 3   close            578 non-null    float64       
+ 4   adjusted close   578 non-null    float64       
+ 5   volume           578 non-null    int64         
+ 6   dividend amount  578 non-null    float64       
+ 7   date             578 non-null    datetime64[ns]
+ 8   symbol           578 non-null    object        
+dtypes: datetime64[ns](1), float64(6), int64(1), object(1)
+memory usage: 40.8+ KB
+[2023-12-29 01:27:12,588] {logging_mixin.py:115} INFO - Tabla creada exitosamente
+[2023-12-29 01:27:12,588] {python.py:173} INFO - Done. Returned value was: None
+[2023-12-29 01:27:12,598] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=monthly_stocks_etl, task_id=etl_process, execution_date=20231229T012707, start_date=20231229T012708, end_date=20231229T012712
+[2023-12-29 01:27:12,610] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-12-29 01:27:12,629] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

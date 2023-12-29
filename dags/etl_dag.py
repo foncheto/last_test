@@ -8,12 +8,13 @@ import requests
 from psycopg2.extras import execute_values
 from dotenv import load_dotenv
 import psycopg2
+import smtplib
 
 # Define default_args, DAG, and other parameters
 default_args = {
     'owner': 'airflow',
     'depends_on_past': False,
-    'start_date': datetime(2023, 12, 10),
+    'start_date': datetime(2023, 12, 20),
     'email_on_failure': False,
     'email_on_retry': False,
     'retries': 1,
@@ -26,6 +27,19 @@ dag = DAG(
     description='ETL DAG for Monthly Stocks Data',
     schedule_interval='@daily',
 )
+
+def enviar(**kwargs):
+    try:
+        x = smtplib.SMTP('smtp.gmail.com', 587)
+        x.starttls()
+        x.login('hashtagfp@gmail.com', 'lxuqcjhpcooexiph')  # Cambia tu contraseña !!!!!!!!
+        body_text = f"high_volume_dates: {kwargs['ti'].xcom_pull(task_ids='etl_process', key='high_volume_dates')}"
+        message = 'Subject: ETL Monthly high_volume_dates\n\n' + body_text
+        x.sendmail('hashtagfp@gmail.com', 'ace.pinto17@gmail.com', message)
+        print('Exito')
+    except Exception as exception:
+        print(exception)
+        print('Failure')
 
 # Function to perform ETL
 def run_etl_process(**kwargs):
@@ -100,7 +114,7 @@ def run_etl_process(**kwargs):
         return df
 
     # Get data for different symbols
-    symbols = ['AAPL', 'AMZN', 'GOOG', 'MSFT', 'IBM']
+    symbols = ['AAPL', 'AMZN']
     dfs = []
     for symbol in symbols:
         data = get_json(symbol)
@@ -202,7 +216,20 @@ def run_etl_process(**kwargs):
             conn.rollback()  # Rollback the transaction on error
 
         # Se carga el DataFrame en la tabla de Redshift
-        cargar_en_redshift(conn=conn, table_name='monthly_stocks_over_time', dataframe=result_df)
+    cargar_en_redshift(conn=conn, table_name='monthly_stocks_over_time', dataframe=result_df)
+    
+    high_volume_dates = result_df[result_df['volume'] > 2500]['date'].dt.strftime('%Y-%m-%d').tolist()
+    print(high_volume_dates)
+
+    # Push high volume dates to XCom
+    kwargs['ti'].xcom_push(key='high_volume_dates', value=high_volume_dates)
+
+    # Filter result_df to include only rows with volume > 3000
+    high_volume_df = result_df[result_df['volume'] > 2500]
+
+    # Print or do something with the filtered DataFrame
+    print("Rows with volume > 3000:")
+    print(high_volume_df)
 
 # Define the ETL task in the DAG
 etl_task = PythonOperator(
@@ -212,8 +239,16 @@ etl_task = PythonOperator(
     dag=dag,
 )
 
+email_task = PythonOperator(
+    task_id='email_task',
+    python_callable=enviar,
+    provide_context=True,
+    dag=dag,
+)
+
 # Set task dependencies (if needed)
 # (e.g., etl_task >> another_task)
+etl_task >> email_task
 
 if __name__ == "__main__":
     dag.cli()

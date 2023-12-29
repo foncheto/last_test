@@ -1,0 +1,25 @@
+[2023-12-29 01:55:24,035] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: monthly_stocks_etl.email_task manual__2023-12-29T01:55:15.127894+00:00 [queued]>
+[2023-12-29 01:55:24,040] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: monthly_stocks_etl.email_task manual__2023-12-29T01:55:15.127894+00:00 [queued]>
+[2023-12-29 01:55:24,040] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-29 01:55:24,041] {taskinstance.py:1377} INFO - Starting attempt 1 of 2
+[2023-12-29 01:55:24,041] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-29 01:55:24,047] {taskinstance.py:1397} INFO - Executing <Task(PythonOperator): email_task> on 2023-12-29 01:55:15.127894+00:00
+[2023-12-29 01:55:24,051] {standard_task_runner.py:52} INFO - Started process 222 to run task
+[2023-12-29 01:55:24,053] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'monthly_stocks_etl', 'email_task', 'manual__2023-12-29T01:55:15.127894+00:00', '--job-id', '64', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmpbf8ora5l', '--error-file', '/tmp/tmp94ab7sbf']
+[2023-12-29 01:55:24,054] {standard_task_runner.py:80} INFO - Job 64: Subtask email_task
+[2023-12-29 01:55:24,089] {task_command.py:371} INFO - Running <TaskInstance: monthly_stocks_etl.email_task manual__2023-12-29T01:55:15.127894+00:00 [running]> on host 476b9ce47c04
+[2023-12-29 01:55:24,127] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=monthly_stocks_etl
+AIRFLOW_CTX_TASK_ID=email_task
+AIRFLOW_CTX_EXECUTION_DATE=2023-12-29T01:55:15.127894+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-12-29T01:55:15.127894+00:00
+[2023-12-29 01:55:25,527] {logging_mixin.py:115} INFO - (555, b'5.5.2 Syntax error, cannot decode response. For more information, go to\n5.5.2  https://support.google.com/a/answer/3221692 and review RFC 5321\n5.5.2 specifications. x19-20020a17090ab01300b0028caac8d061sm947984pjq.12 - gsmtp', 'hashtagfp@@gmail.com')
+[2023-12-29 01:55:25,529] {logging_mixin.py:115} INFO - Failure
+[2023-12-29 01:55:25,531] {python.py:173} INFO - Done. Returned value was: None
+[2023-12-29 01:55:25,556] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=monthly_stocks_etl, task_id=email_task, execution_date=20231229T015515, start_date=20231229T015524, end_date=20231229T015525
+[2023-12-29 01:55:25,581] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-12-29 01:55:25,607] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
