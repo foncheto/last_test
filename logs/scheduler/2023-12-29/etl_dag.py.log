@@ -3681,3 +3681,87 @@ NameError: name 'send_email' is not defined
 [2023-12-29 02:07:44,373] {logging_mixin.py:115} INFO - [2023-12-29 02:07:44,373] {dag.py:2420} INFO - Sync 1 DAGs
 [2023-12-29 02:07:44,382] {logging_mixin.py:115} INFO - [2023-12-29 02:07:44,382] {dag.py:2972} INFO - Setting next_dagrun for monthly_stocks_etl to 2023-12-29T00:00:00+00:00, run_after=2023-12-30T00:00:00+00:00
 [2023-12-29 02:07:44,387] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.678 seconds
+[2023-12-29 02:12:23,495] {processor.py:153} INFO - Started process (PID=174) to work on /opt/airflow/dags/etl_dag.py
+[2023-12-29 02:12:23,496] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2023-12-29 02:12:23,496] {logging_mixin.py:115} INFO - [2023-12-29 02:12:23,496] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2023-12-29 02:12:24,281] {processor.py:651} INFO - DAG(s) dict_keys(['monthly_stocks_etl']) retrieved from /opt/airflow/dags/etl_dag.py
+[2023-12-29 02:12:24,293] {logging_mixin.py:115} INFO - [2023-12-29 02:12:24,292] {dag.py:2420} INFO - Sync 1 DAGs
+[2023-12-29 02:12:24,305] {logging_mixin.py:115} INFO - [2023-12-29 02:12:24,305] {dag.py:2972} INFO - Setting next_dagrun for monthly_stocks_etl to 2023-12-29T00:00:00+00:00, run_after=2023-12-30T00:00:00+00:00
+[2023-12-29 02:12:24,311] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.819 seconds
+[2023-12-29 02:12:34,378] {processor.py:153} INFO - Started process (PID=181) to work on /opt/airflow/dags/etl_dag.py
+[2023-12-29 02:12:34,378] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2023-12-29 02:12:34,379] {logging_mixin.py:115} INFO - [2023-12-29 02:12:34,379] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2023-12-29 02:12:35,109] {processor.py:651} INFO - DAG(s) dict_keys(['monthly_stocks_etl']) retrieved from /opt/airflow/dags/etl_dag.py
+[2023-12-29 02:12:35,119] {logging_mixin.py:115} INFO - [2023-12-29 02:12:35,119] {dag.py:2420} INFO - Sync 1 DAGs
+[2023-12-29 02:12:35,130] {logging_mixin.py:115} INFO - [2023-12-29 02:12:35,130] {dag.py:2972} INFO - Setting next_dagrun for monthly_stocks_etl to 2023-12-29T00:00:00+00:00, run_after=2023-12-30T00:00:00+00:00
+[2023-12-29 02:12:35,135] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.759 seconds
+[2023-12-29 02:12:45,222] {processor.py:153} INFO - Started process (PID=199) to work on /opt/airflow/dags/etl_dag.py
+[2023-12-29 02:12:45,223] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2023-12-29 02:12:45,225] {logging_mixin.py:115} INFO - [2023-12-29 02:12:45,225] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2023-12-29 02:12:46,021] {processor.py:651} INFO - DAG(s) dict_keys(['monthly_stocks_etl']) retrieved from /opt/airflow/dags/etl_dag.py
+[2023-12-29 02:12:46,032] {logging_mixin.py:115} INFO - [2023-12-29 02:12:46,032] {dag.py:2420} INFO - Sync 1 DAGs
+[2023-12-29 02:12:46,044] {logging_mixin.py:115} INFO - [2023-12-29 02:12:46,044] {dag.py:2972} INFO - Setting next_dagrun for monthly_stocks_etl to 2023-12-29T00:00:00+00:00, run_after=2023-12-30T00:00:00+00:00
+[2023-12-29 02:12:46,050] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.834 seconds
+[2023-12-29 02:12:56,153] {processor.py:153} INFO - Started process (PID=208) to work on /opt/airflow/dags/etl_dag.py
+[2023-12-29 02:12:56,154] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2023-12-29 02:12:56,155] {logging_mixin.py:115} INFO - [2023-12-29 02:12:56,155] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2023-12-29 02:12:56,805] {processor.py:651} INFO - DAG(s) dict_keys(['monthly_stocks_etl']) retrieved from /opt/airflow/dags/etl_dag.py
+[2023-12-29 02:12:56,815] {logging_mixin.py:115} INFO - [2023-12-29 02:12:56,814] {dag.py:2420} INFO - Sync 1 DAGs
+[2023-12-29 02:12:56,825] {logging_mixin.py:115} INFO - [2023-12-29 02:12:56,825] {dag.py:2972} INFO - Setting next_dagrun for monthly_stocks_etl to 2023-12-29T00:00:00+00:00, run_after=2023-12-30T00:00:00+00:00
+[2023-12-29 02:12:56,829] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.683 seconds
+[2023-12-29 02:13:06,900] {processor.py:153} INFO - Started process (PID=214) to work on /opt/airflow/dags/etl_dag.py
+[2023-12-29 02:13:06,901] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2023-12-29 02:13:06,902] {logging_mixin.py:115} INFO - [2023-12-29 02:13:06,901] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2023-12-29 02:13:07,574] {processor.py:651} INFO - DAG(s) dict_keys(['monthly_stocks_etl']) retrieved from /opt/airflow/dags/etl_dag.py
+[2023-12-29 02:13:07,585] {logging_mixin.py:115} INFO - [2023-12-29 02:13:07,585] {dag.py:2420} INFO - Sync 1 DAGs
+[2023-12-29 02:13:07,597] {logging_mixin.py:115} INFO - [2023-12-29 02:13:07,597] {dag.py:2972} INFO - Setting next_dagrun for monthly_stocks_etl to 2023-12-29T00:00:00+00:00, run_after=2023-12-30T00:00:00+00:00
+[2023-12-29 02:13:07,602] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.706 seconds
+[2023-12-29 02:13:17,698] {processor.py:153} INFO - Started process (PID=220) to work on /opt/airflow/dags/etl_dag.py
+[2023-12-29 02:13:17,701] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2023-12-29 02:13:17,702] {logging_mixin.py:115} INFO - [2023-12-29 02:13:17,702] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2023-12-29 02:13:18,312] {processor.py:651} INFO - DAG(s) dict_keys(['monthly_stocks_etl']) retrieved from /opt/airflow/dags/etl_dag.py
+[2023-12-29 02:13:18,321] {logging_mixin.py:115} INFO - [2023-12-29 02:13:18,321] {dag.py:2420} INFO - Sync 1 DAGs
+[2023-12-29 02:13:18,331] {logging_mixin.py:115} INFO - [2023-12-29 02:13:18,331] {dag.py:2972} INFO - Setting next_dagrun for monthly_stocks_etl to 2023-12-29T00:00:00+00:00, run_after=2023-12-30T00:00:00+00:00
+[2023-12-29 02:13:18,336] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.642 seconds
+[2023-12-29 02:13:28,410] {processor.py:153} INFO - Started process (PID=226) to work on /opt/airflow/dags/etl_dag.py
+[2023-12-29 02:13:28,412] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2023-12-29 02:13:28,413] {logging_mixin.py:115} INFO - [2023-12-29 02:13:28,413] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2023-12-29 02:13:29,025] {processor.py:651} INFO - DAG(s) dict_keys(['monthly_stocks_etl']) retrieved from /opt/airflow/dags/etl_dag.py
+[2023-12-29 02:13:29,035] {logging_mixin.py:115} INFO - [2023-12-29 02:13:29,035] {dag.py:2420} INFO - Sync 1 DAGs
+[2023-12-29 02:13:29,044] {logging_mixin.py:115} INFO - [2023-12-29 02:13:29,044] {dag.py:2972} INFO - Setting next_dagrun for monthly_stocks_etl to 2023-12-29T00:00:00+00:00, run_after=2023-12-30T00:00:00+00:00
+[2023-12-29 02:13:29,049] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.641 seconds
+[2023-12-29 02:13:39,126] {processor.py:153} INFO - Started process (PID=232) to work on /opt/airflow/dags/etl_dag.py
+[2023-12-29 02:13:39,128] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2023-12-29 02:13:39,129] {logging_mixin.py:115} INFO - [2023-12-29 02:13:39,129] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2023-12-29 02:13:39,722] {processor.py:651} INFO - DAG(s) dict_keys(['monthly_stocks_etl']) retrieved from /opt/airflow/dags/etl_dag.py
+[2023-12-29 02:13:39,731] {logging_mixin.py:115} INFO - [2023-12-29 02:13:39,731] {dag.py:2420} INFO - Sync 1 DAGs
+[2023-12-29 02:13:39,740] {logging_mixin.py:115} INFO - [2023-12-29 02:13:39,740] {dag.py:2972} INFO - Setting next_dagrun for monthly_stocks_etl to 2023-12-29T00:00:00+00:00, run_after=2023-12-30T00:00:00+00:00
+[2023-12-29 02:13:39,745] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.624 seconds
+[2023-12-29 02:13:49,835] {processor.py:153} INFO - Started process (PID=238) to work on /opt/airflow/dags/etl_dag.py
+[2023-12-29 02:13:49,836] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2023-12-29 02:13:49,837] {logging_mixin.py:115} INFO - [2023-12-29 02:13:49,837] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2023-12-29 02:13:50,453] {processor.py:651} INFO - DAG(s) dict_keys(['monthly_stocks_etl']) retrieved from /opt/airflow/dags/etl_dag.py
+[2023-12-29 02:13:50,464] {logging_mixin.py:115} INFO - [2023-12-29 02:13:50,464] {dag.py:2420} INFO - Sync 1 DAGs
+[2023-12-29 02:13:50,475] {logging_mixin.py:115} INFO - [2023-12-29 02:13:50,475] {dag.py:2972} INFO - Setting next_dagrun for monthly_stocks_etl to 2023-12-29T00:00:00+00:00, run_after=2023-12-30T00:00:00+00:00
+[2023-12-29 02:13:50,480] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.647 seconds
+[2023-12-29 02:14:00,555] {processor.py:153} INFO - Started process (PID=244) to work on /opt/airflow/dags/etl_dag.py
+[2023-12-29 02:14:00,556] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2023-12-29 02:14:00,556] {logging_mixin.py:115} INFO - [2023-12-29 02:14:00,556] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2023-12-29 02:14:01,158] {processor.py:651} INFO - DAG(s) dict_keys(['monthly_stocks_etl']) retrieved from /opt/airflow/dags/etl_dag.py
+[2023-12-29 02:14:01,168] {logging_mixin.py:115} INFO - [2023-12-29 02:14:01,168] {dag.py:2420} INFO - Sync 1 DAGs
+[2023-12-29 02:14:01,177] {logging_mixin.py:115} INFO - [2023-12-29 02:14:01,177] {dag.py:2972} INFO - Setting next_dagrun for monthly_stocks_etl to 2023-12-29T00:00:00+00:00, run_after=2023-12-30T00:00:00+00:00
+[2023-12-29 02:14:01,181] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.630 seconds
+[2023-12-29 02:14:11,272] {processor.py:153} INFO - Started process (PID=250) to work on /opt/airflow/dags/etl_dag.py
+[2023-12-29 02:14:11,273] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2023-12-29 02:14:11,274] {logging_mixin.py:115} INFO - [2023-12-29 02:14:11,274] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2023-12-29 02:14:11,879] {processor.py:651} INFO - DAG(s) dict_keys(['monthly_stocks_etl']) retrieved from /opt/airflow/dags/etl_dag.py
+[2023-12-29 02:14:11,888] {logging_mixin.py:115} INFO - [2023-12-29 02:14:11,888] {dag.py:2420} INFO - Sync 1 DAGs
+[2023-12-29 02:14:11,898] {logging_mixin.py:115} INFO - [2023-12-29 02:14:11,898] {dag.py:2972} INFO - Setting next_dagrun for monthly_stocks_etl to 2023-12-29T00:00:00+00:00, run_after=2023-12-30T00:00:00+00:00
+[2023-12-29 02:14:11,902] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.633 seconds
+[2023-12-29 02:14:22,004] {processor.py:153} INFO - Started process (PID=256) to work on /opt/airflow/dags/etl_dag.py
+[2023-12-29 02:14:22,006] {processor.py:641} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2023-12-29 02:14:22,007] {logging_mixin.py:115} INFO - [2023-12-29 02:14:22,007] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2023-12-29 02:14:22,646] {processor.py:651} INFO - DAG(s) dict_keys(['monthly_stocks_etl']) retrieved from /opt/airflow/dags/etl_dag.py
+[2023-12-29 02:14:22,657] {logging_mixin.py:115} INFO - [2023-12-29 02:14:22,656] {dag.py:2420} INFO - Sync 1 DAGs
+[2023-12-29 02:14:22,668] {logging_mixin.py:115} INFO - [2023-12-29 02:14:22,668] {dag.py:2972} INFO - Setting next_dagrun for monthly_stocks_etl to 2023-12-29T00:00:00+00:00, run_after=2023-12-30T00:00:00+00:00
+[2023-12-29 02:14:22,673] {processor.py:161} INFO - Processing /opt/airflow/dags/etl_dag.py took 0.674 seconds
