@@ -1,0 +1,56 @@
+[2023-12-30 00:00:01,156] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: monthly_stocks_etl.etl_process scheduled__2023-12-29T00:00:00+00:00 [queued]>
+[2023-12-30 00:00:01,160] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: monthly_stocks_etl.etl_process scheduled__2023-12-29T00:00:00+00:00 [queued]>
+[2023-12-30 00:00:01,160] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-30 00:00:01,161] {taskinstance.py:1377} INFO - Starting attempt 1 of 2
+[2023-12-30 00:00:01,161] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-12-30 00:00:01,167] {taskinstance.py:1397} INFO - Executing <Task(PythonOperator): etl_process> on 2023-12-29 00:00:00+00:00
+[2023-12-30 00:00:01,170] {standard_task_runner.py:52} INFO - Started process 6451 to run task
+[2023-12-30 00:00:01,173] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'monthly_stocks_etl', 'etl_process', 'scheduled__2023-12-29T00:00:00+00:00', '--job-id', '95', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmp20f5hawk', '--error-file', '/tmp/tmpd5uo3w6n']
+[2023-12-30 00:00:01,174] {standard_task_runner.py:80} INFO - Job 95: Subtask etl_process
+[2023-12-30 00:00:01,205] {task_command.py:371} INFO - Running <TaskInstance: monthly_stocks_etl.etl_process scheduled__2023-12-29T00:00:00+00:00 [running]> on host 476b9ce47c04
+[2023-12-30 00:00:01,242] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=monthly_stocks_etl
+AIRFLOW_CTX_TASK_ID=etl_process
+AIRFLOW_CTX_EXECUTION_DATE=2023-12-29T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-12-29T00:00:00+00:00
+[2023-12-30 00:00:02,380] {logging_mixin.py:115} INFO - Connected to Redshift successfully!
+[2023-12-30 00:00:05,046] {logging_mixin.py:115} INFO - <Response [200]>
+[2023-12-30 00:00:10,012] {logging_mixin.py:115} INFO - <Response [200]>
+[2023-12-30 00:00:10,081] {logging_mixin.py:115} INFO - <class 'pandas.core.frame.DataFrame'>
+RangeIndex: 578 entries, 0 to 577
+Data columns (total 9 columns):
+ #   Column           Non-Null Count  Dtype         
+---  ------           --------------  -----         
+ 0   open             578 non-null    float64       
+ 1   high             578 non-null    float64       
+ 2   low              578 non-null    float64       
+ 3   close            578 non-null    float64       
+ 4   adjusted close   578 non-null    float64       
+ 5   volume           578 non-null    int64         
+ 6   dividend amount  578 non-null    float64       
+ 7   date             578 non-null    datetime64[ns]
+ 8   symbol           578 non-null    object        
+dtypes: datetime64[ns](1), float64(6), int64(1), object(1)
+memory usage: 40.8+ KB
+[2023-12-30 00:00:10,718] {logging_mixin.py:115} INFO - Tabla creada exitosamente
+[2023-12-30 00:00:10,721] {logging_mixin.py:115} INFO - ['open', 'high', 'low', 'close', 'adjusted close', 'volume', 'dividend amount', 'date', 'symbol']
+[2023-12-30 00:00:10,723] {logging_mixin.py:115} INFO - 
+            CREATE TABLE IF NOT EXISTS monthly_stocks_over_time ("open" FLOAT, "high" FLOAT, "low" FLOAT, "close" FLOAT, "adjusted close" FLOAT, "volume" VARCHAR(255), "dividend amount" FLOAT, "date" TIMESTAMP, "symbol" VARCHAR(255));
+            
+[2023-12-30 00:00:12,468] {logging_mixin.py:115} INFO - Proceso terminado
+[2023-12-30 00:00:12,480] {logging_mixin.py:115} INFO - ['2021-03-31', '2020-10-30', '2020-09-30']
+[2023-12-30 00:00:12,497] {logging_mixin.py:115} INFO - Rows with volume > 3000:
+[2023-12-30 00:00:12,508] {logging_mixin.py:115} INFO -       open    high     low   close  ...  volume  dividend amount       date symbol
+66  123.75  128.72  116.21  122.15  ...    2651              0.0 2021-03-31   AAPL
+77  117.64  125.39  107.72  108.86  ...    2895              0.0 2020-10-30   AAPL
+78  132.76  137.98  103.10  115.81  ...    3887              0.0 2020-09-30   AAPL
+
+[3 rows x 9 columns]
+[2023-12-30 00:00:12,509] {python.py:173} INFO - Done. Returned value was: None
+[2023-12-30 00:00:12,516] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=monthly_stocks_etl, task_id=etl_process, execution_date=20231229T000000, start_date=20231230T000001, end_date=20231230T000012
+[2023-12-30 00:00:12,555] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-12-30 00:00:12,574] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check
